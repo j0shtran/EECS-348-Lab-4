@@ -1,0 +1,43 @@
+<script src="colorchange.js" type="text/javascript"></script>
+<body>
+<div id="paragraph">
+Change me!
+</div>
+
+
+<input type="text" id="RGBinput" value="">
+<button onclick="ChangeColor()">Change Color</button>
+<input type="text" id="border" value="">
+<button onclick="ChangeBorder()">Change Border </button>
+
+
+
+<script>
+	function ChangeColor() {	
+		let input = document.getElementById("RGBinput").value;
+		let rgb;
+		if (!input.startsWith("rgb")) {
+			rgb = "rgb("+input+")";
+		} else {
+		rgb = input;
+		}
+
+		document.getElementById("paragraph").style.backgroundColor = rgb;
+	}
+
+	function ChangeBorder() {
+		let input = document.getElementById("border").value;
+		document.getElementById("paragraph").style.borderWidth = input;
+	}
+</script>
+
+
+
+</body>
+<style>
+	#paragraph {
+		border-style: solid;
+		color: black;
+		font-size: 22pt;
+	}
+</style>

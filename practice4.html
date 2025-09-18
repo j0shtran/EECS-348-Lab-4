@@ -1,0 +1,56 @@
+<html>
+
+  <head>
+<title>"Multiplication Table"</title>
+  </head>
+<body>
+<input type="text" id="NumInput" value="">
+<input type="submit" value="Make Table">
+      <?php
+      $number = (int) $_GET['NumInput'];
+
+      if ($number <= 0) {
+        echo "<p> Please enter a number greater than 0</p>";
+
+      } else {
+        echo "<h2>Multiplication Table</h2>";
+        echo "<table border='1' cellspacing='0' cellpadding='5'>";
+
+        echo "<tr><th>*</tr>";
+        for ($col = 1; $col <= $number; $col++) {
+                echo "<th>$col</th>";  // Column indexes
+            }
+            echo "</tr>";
+
+            // Table rows (multiplication results)
+            for ($row = 1; $row <= $number; $row++) {
+                echo "<tr>";
+                echo "<th>$row</th>";  // Row index
+                for ($col = 1; $col <= $number; $col++) {
+                    echo "<td>" . ($row * $col) . "</td>";  // Multiplication result
+                }
+                echo "</tr>";
+            }
+
+            echo "</table>";
+      } ;
+      for ($col = 1; $col <= $number; $col++) {
+                echo "<th>$col</th>";  // Column indexes
+            }
+            echo "</tr>";
+
+            // Table rows (multiplication results)
+            for ($row = 1; $row <= $number; $row++) {
+                echo "<tr>";
+                echo "<th>$row</th>";  // Row index
+                for ($col = 1; $col <= $number; $col++) {
+                    echo "<td>" . ($row * $col) . "</td>";  // Multiplication result
+                }
+                echo "</tr>";
+            }
+
+            echo "</table>";
+    
+    ?>
+</body>
+</html>

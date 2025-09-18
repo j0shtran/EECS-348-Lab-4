@@ -1,0 +1,31 @@
+<html>
+<head>
+PASSWORD CHECK!
+</head>
+
+
+<body>
+<input type="password" id="password1" value="">
+<input type="password" id="password2" value="">
+<button onclick="CheckPassword()">Check your password</button>
+
+<script>
+	function CheckPassword() {
+		let pw1 = document.getElementById("password1").value;
+		let pw2 = document.getElementById("password2").value;
+		if pw1.length < 8 {
+			document.write("Password not long enough");
+		}
+		else if pw1 !== pw2 {
+			document.write("Passwords don't match");
+		}
+		else {
+			document.write("Password looks good!");
+		|}
+	}	
+</script>
+
+
+
+</body>
+</html>
